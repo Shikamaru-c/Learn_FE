@@ -1,0 +1,23 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+ul {
+	font-size: 0;
+	margin: 0 auto;
+	width: 800px;
+	padding: 5px;
+}
+li {
+	list-style: none;
+	border: 1px #eee solid;
+	display: inline-block;
+	margin: 10px;
+	cursor: pointer;
+}
+.big {
+	width: 340px;
+	height: 340px;
+	position: fixed;
+	border: 1px solid black;
+}

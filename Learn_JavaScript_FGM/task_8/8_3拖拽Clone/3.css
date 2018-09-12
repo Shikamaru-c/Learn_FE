@@ -1,0 +1,18 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	background-color: #555;
+}
+div {
+	border: 1px solid #eee;
+	background-color: black;
+	width: 100px;
+	height: 100px;
+	cursor: move;
+	position: absolute;
+}
+div:last-child {
+	left: 300px;
+}

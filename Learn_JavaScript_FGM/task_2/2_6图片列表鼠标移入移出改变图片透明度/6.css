@@ -1,0 +1,27 @@
+ *{
+ 	padding: 0;
+ 	margin: 0;
+ }
+ ul {
+ 	font-size: 0;
+ 	width: 700px;
+ 	margin: 0 auto;
+ 	border: 1px solid black;
+ 	padding: 5px;
+ }
+ li {
+ 	list-style: none;
+ 	display: inline-block;
+ 	width: 128px;
+ 	height: 128px;
+ 	border: 1px solid #ccc;
+ 	margin: 5px;
+ }
+ img {
+ 	opacity: 0.3;
+ }
+ img:hover,img:active {
+ 	cursor: crosshair;
+ 	opacity: 1;
+ }
+ /*css3的解决方法*/

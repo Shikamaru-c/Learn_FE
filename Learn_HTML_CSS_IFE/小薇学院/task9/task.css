@@ -1,0 +1,538 @@
+* {
+	font-family: "微软雅黑";
+}
+header {
+	width: 100%;
+	height: 55px;
+	background-color: #2189bf;
+}
+.headerContent {
+	width: 1280px;
+	margin: 0 auto;
+}
+img#logo {
+	float: left;
+	margin-top: 9.5px;
+	margin-left: 40px;
+}
+.search {
+	float: right;
+	line-height: 55px;
+	margin-right: 80px;
+	width: 350px;
+	position: relative;
+	color: white;
+	font-size: 14px;
+}
+.search input {
+	height: 24px;
+	border: none;
+	width: 240px;
+	border-radius: 20px;
+	padding-left: 35px;
+}
+img#sosuo {
+	position: absolute;
+	left: 12px;
+	top: 19px;
+}
+img#denglu {
+	margin-left: 20px;
+	vertical-align: middle;
+}
+
+/*以上是header部分*/
+
+.wrapper {
+	width: 1280px;
+	margin: 0 auto;
+	position: relative;
+}
+aside {
+	width: 220px;
+	padding-left: 40px;
+	float: left;
+	background-color: #2a2e3d;
+	height: 1211px;
+}
+aside .logo {
+	padding: 15px 0 ;
+}
+aside .logo .hpWrapper {
+	height: 55px;
+	width: 55px;
+	border: 2px solid #ccc;
+	border-radius: 50%;
+	float: left;
+}
+aside .logo .hpWrapper .hp {
+	border-radius: 50%;
+	background-color: #ccc;
+	width: 45px;
+	height: 45px;
+	margin: 5px;
+}
+aside .logo h2 {
+	float: left;
+	line-height: 55px;
+	color: #ccc;
+	margin-left: 15px;
+	font-size: 14px;
+}
+aside ul.shoucang {
+	clear: both;
+	color: white;
+}
+aside ul.shoucang li {
+	float: left;
+	padding: 0 24px;
+	margin-top: 20px;
+	font-size: 14px;
+}
+aside ul.shoucang li:first-child {
+	border-right: 1px solid #ccc;
+}
+aside ul.nav {
+	clear: both;
+	padding-top: 20px;
+	color: white;
+	font-size: 14px;
+}
+aside ul.nav li {
+	padding: 16px 0;
+}
+aside ul.nav>li>h2>img {
+	width: 12px;
+	height: 12px;
+	margin-right: 16px;
+}
+ul.nav li ul li {
+	padding: 10px 0;
+}
+ul.nav li ul li img {
+	margin-right: 6px;
+}
+ul.nav li ul li {
+	margin-left: 30px;
+}
+ul.nav li ul li div.wrapper82 {
+	float: left;
+	height: 11px;
+	width: 11px;
+	overflow: hidden;
+	margin-right: 6px;
+}
+
+
+.content {
+	width: 1020px;
+	float: right;
+	background-color: #ededec;
+	height: 1211px;
+}
+
+.contentHeader {
+	background-color: white;
+	overflow: auto;
+}
+.contentHeader ul {
+	margin-left: 20px;
+}
+.contentHeader li {
+	float: left;
+	height: 31px;
+	line-height: 31px;
+	font-size: 14px;
+	padding: 0 9px;
+}
+.contentHeader li a {
+	text-decoration: none;
+	color: #ccc;
+}
+
+.content .section1 {
+	width: 891px;
+	height: 86px;
+	margin: 0 auto;
+	background-color: white;
+	margin-top: 20px;
+	box-sizing: border-box;
+	padding: 15px 20px;
+}
+
+.content .section1>div{
+	float: left;
+	margin-right: 30px;
+}
+.content .section1 select,.content .section1 input  {
+	margin-left: 10px;
+}
+.content .section1 select,.content .section1 input {
+	padding-left: 5px;
+}
+.sec2 select {
+	width: 120px;
+}
+.sec2 label {
+	display: block;
+	margin-bottom: 10px;
+}
+.content .section1 .sec2 {
+	margin: 0;
+}
+.section1 .change {
+	margin-top: 10px;
+}
+.section1 .change1 {
+	position: relative;
+}
+.section1 .change1 h1 {
+	position: absolute;
+	font-size: 14px;
+	line-height: 14px;
+	top: 11px;
+	left: 13px;
+	font-weight: normal;
+	color: white;
+	cursor: pointer;
+}
+.content .section1 .sec3 label {
+	float: left;
+	display: block;
+}
+.content .section1 .sec3 {
+	width: 350px;
+}
+.content .section1 .sec3 label:first-child {
+	width: 198px;
+	margin-bottom: 10px;
+}
+.content .section1 .sec3 label:first-child select{
+	width: 135px;
+}
+.content .section1 .sec3 label:nth-child(2) {
+	width: 148px;
+	margin-bottom: 10px;
+}
+.sec3 label:nth-child(2) select {
+	width: 85px;
+}
+.content .section1 .sec3 label:nth-child(3) {
+	width: 148px;
+}
+.sec3 label:nth-child(3) select{
+	width: 85px;
+}
+.content .section1 .sec3 label:last-child {
+	width: 198px;
+}
+.sec3 label:last-child select {
+	width: 135px;
+}
+.section1 button {
+	box-sizing: border-box;
+	background-color: #388ac1;
+	border: none;
+	outline: none;
+	width: 60px;
+	height: 30px;
+	border-radius: 3px;
+	color: white;
+	margin-top: 13px;
+}
+
+.content .section2 {
+	width: 891px;
+	margin: 0 auto;
+	margin-top: 14px;
+	overflow: auto;
+}
+.content .section2>div {
+	float: left;
+	margin-right: 10px;
+	background-color: white;
+	height: 64px;
+	text-align: center;
+	box-sizing: border-box;
+}
+.content .section2>div:last-child {
+	margin-right: 0;
+	width: 121px;
+}
+.content .section2 div.navbar {
+	width: 30px;
+}
+.content .section2 div.chengjiao {
+	width: 105px;
+}
+.content .section2 .chengjiao time {
+	font-size: 12px;
+	display: block;
+	margin: 10px;
+}
+.content .section2 .chengjiao .money {
+	font-size: 20px;
+	color: orange;
+}
+.content .section2 .chengjiao .money .yuan {
+	font-size: 14px;
+	color: #ccc;
+}
+.content .section2 .navbar img{
+	margin-top: 23.5px;
+}
+.content .section2 .history img {
+	display: block;
+	float: left;
+	margin-top: 16px;
+	margin-left: 10px;
+}
+.content .section2 .history {
+	line-height: 64px;
+	font-size: 14px;
+}
+.borderChange {
+	border-top: 3px solid #388bc2;
+}
+#pre,#nex {
+	cursor: pointer;
+}
+
+.content .section3 {
+	width: 891px;
+	margin: 0 auto;
+	margin-top: 20px;
+	overflow: auto;
+}
+.content .section3 li {
+	float: left;
+	width: 202.5px;
+	margin-right: 27px;
+	background-color: white;
+	box-sizing: border-box;
+	height: 80px;
+	padding: 15px;
+}
+.content .section3 h1 {
+	font-size: 14px;
+	font-weight: normal;
+	margin-bottom: 8px;
+}
+.content .section3 .shuliang {
+	float: left;
+	width: 65px;
+	line-height: 24px;
+	font-size: 14px;
+}
+.content .section3 .square {
+	width: 70px;
+	height: 50px;
+	float: right;
+}
+.content .section3 li:last-child {
+	margin-right: 0;
+	border-left: 4px solid #e2cd46;
+}
+.content .section3 li:last-child .square {
+	background-color: #e2cd46;
+}
+.content .section3 li:first-child {
+	border-left: 4px solid #44b29e;
+}
+.content .section3 li:first-child .square {
+	background-color: #44b29e;
+}
+.content .section3 li:nth-child(2) {
+	border-left: 4px solid #388bc2;
+}
+.content .section3 li:nth-child(2) .square {
+	background-color: #388bc2;
+}
+.content .section3 li:nth-child(3) {
+	border-left: 4px solid #d04a36;
+}
+.content .section3 li:nth-child(3) .square {
+	background-color: #d04a36;
+}
+
+.content .section4 {
+	width: 891px;
+	margin: 0 auto;
+	margin-top: 15px;
+	overflow: auto;
+}
+.content .section4>div {
+	background-color: white;
+	float: left;
+	box-sizing: border-box;
+	border: 1px solid #bbb;
+	border-radius: 8px;
+	overflow: hidden;
+}
+.content .section4 .sec4L {
+	width: 540px;
+	margin-right: 20px;
+	height: 400px;
+}
+.content .section4 .sec4L h1{
+	background-color: #eee;
+	padding: 15px;
+	color: #aaa;
+	font-size: 14px;
+}
+
+
+.content .section4 .sec4R {
+	width: 331px;
+	height: 400px;
+}
+.content .section4 .sec4R h1{
+	background-color: #eee;
+	padding: 15px;
+	color: #aaa;
+	font-size: 14px;
+}
+.content .section4 .sec4R .sec4Rform {
+	padding: 20px 0 0 40px;
+}
+.sec4Rform label {
+	padding-left: 10px;
+	color: #bbb;
+	font-size: 14px;
+	line-height: 18px;
+}
+.sec4Rform input#input1 {
+	border: none;
+	border-bottom: 1px solid #bbb;
+	width: 269px;
+	box-sizing: border-box;
+	padding: 5px 10px;
+	font-size: 16px;
+}
+.sec4Rform .form1 {
+	width: 101px;
+	float: left;
+	border-right: 1px solid #bbb;
+	box-sizing: border-box;
+}
+.sec4Rform .form2 {
+	width: 188px;
+	float: left;
+	box-sizing: border-box;
+}
+#input2 {
+	border: none;
+	border-bottom: 1px solid #bbb;
+	padding: 5px 10px;
+	font-size: 16px;
+	box-sizing: border-box;
+	width: 100px;
+}
+#input3 {
+	border: none;
+	border-bottom: 1px solid #bbb;
+	padding: 5px 10px;
+	font-size: 16px;
+	box-sizing: border-box;
+	width: 188px;
+}
+#input4 {
+	border: none;
+	outline: none;
+	resize: none;
+	border-bottom: 1px solid #bbb;
+	padding: 5px 10px;
+	font-size: 16px;
+	box-sizing: border-box;
+	width: 269px;
+	height: 140px;
+}
+label#check {
+	padding: 0;
+}
+button#btnSosuo {
+	float: right;
+	margin-right: 20px;
+	box-sizing: border-box;
+	background-color: #388ac1;
+	border: none;
+	outline: none;
+	width: 60px;
+	height: 30px;
+	border-radius: 3px;
+	color: white;
+}
+.form3 {
+	line-height: 30px;
+}
+.form3 label {
+	margin-left: 5px;
+}
+
+.content .section5 {
+	width: 891px;
+	margin: 0 auto;
+	margin-top: 15px;
+	overflow: auto;
+}
+.content .section5>div {
+	background-color: white;
+	float: left;
+	box-sizing: border-box;
+	border: 1px solid #bbb;
+	border-radius: 8px;
+}
+.content .section5 .sec5L {
+	width: 331px;
+	height: 420px;
+	margin-right: 15px;
+}
+.content .section5 .sec5R {
+	width: 540px;
+	height: 420px;
+	overflow: hidden;
+}
+.content .section5 .sec5R h1 {
+	background-color: #eee;
+	padding: 15px;
+	color: #aaa;
+	font-size: 14px;
+}
+.sec5R table {
+	margin: 14px 40px;
+}
+.sec5R td,.sec5R th {
+	border: 1px solid #bbb;
+}
+.sec5R table th,.sec5R table td {
+	height: 30px;
+	line-height: 30px;
+	font-size: 16px;
+}
+.col1 {
+	width: 58px;
+	text-align: center;
+}
+.col2 {
+	width: 90px;
+	text-align: center;
+}
+.col3 {
+	width: 310px;
+	text-align: left;
+	padding-left: 30px;
+}
+.sec5R tbody tr:last-child td {
+	border-bottom: none;
+}
+.sec5R tbody tr td:last-child div.planWrapper {
+	width: 200px;
+	height: 4px;
+	background-color: #eee;
+	float: right;
+	margin: 13px 10px 0 0;
+}
+.plan {
+	height: 4px;
+	background-color: #388ac1;
+}

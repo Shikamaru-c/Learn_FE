@@ -1,0 +1,14 @@
+.wrapper {
+	width: 200px;
+	margin: 0 auto;
+	height: 20px;
+	position: relative;
+}
+#info {
+	border: 1px solid yellow;
+	background-color: red;
+	position: absolute;
+	bottom: -75px;
+	left: 0;
+	display: none;
+}

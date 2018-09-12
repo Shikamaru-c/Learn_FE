@@ -1,0 +1,47 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+.wrapper {
+	font-size: 0;
+	background-color: black;
+	width: 290px;
+	margin: 0 auto;
+}
+.header {
+	height: 20px;
+}
+h2 {
+	font-size: 14px;
+	color: white;
+	float: right;
+	line-height: 20px;
+}
+.screen {
+	height: 120px;
+	background-color: #6c3;
+	clear: both;
+}
+.btnG {
+	width: 290px;
+	padding: 10px 5px;
+}
+button {
+	width: 60px;
+	height: 40px;
+/*	background-color: transparent;
+	border: none;*/
+	margin: 5px;
+	cursor: pointer;
+}
+#btnD {
+	height: 90px;
+	float: right;
+	margin-right: 15px;
+}
+#btn0 {
+	width: 130px;
+}
+button:hover {
+	background-color: #ccc;
+}

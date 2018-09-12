@@ -1,0 +1,38 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.wrapper {
+	width: 150px;
+	padding: 10px;
+	margin: 10px auto;
+	border: 1px solid black;
+	border-radius: 5px;
+	background-color: #eee;
+}
+label {
+	display: block;
+	margin: 10px 0;
+}
+.wrapper>label {
+	display: inline-block;
+}
+span {
+	margin-left: 10px;
+	font-size: 12px;
+}
+strong {
+	margin-left: 10px;
+	font-size: 12px;
+}
+span#reverse {
+	color: #07f;
+	cursor: pointer;
+}
+span#reverse:hover {
+	color: red;
+}
+p {
+	margin: 10px auto;
+	width: 440px;
+}

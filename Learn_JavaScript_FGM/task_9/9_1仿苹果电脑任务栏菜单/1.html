@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>1</title>
+  <style>
+    ul {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 0;      
+    }
+    li {
+      display: inline-block;
+      list-style: none;
+    }
+    img {
+      width: 60px;
+      padding: 50px 5px 10px;      
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li><img src="images/1.png"></li>
+    <li><img src="images/2.png"></li>
+    <li><img src="images/3.png"></li>
+    <li><img src="images/4.png"></li>
+    <li><img src="images/5.png"></li>
+    <li><img src="images/6.png"></li>
+    <li><img src="images/7.png"></li>
+    <li><img src="images/8.png"></li>
+  </ul>
+  <script>
+    function toBig (img, toWidth) {
+      if (!img) return
+      clearInterval(img.timer)
+      img.timer = setInterval(function () {
+        let nowWidth = parseInt(window.getComputedStyle(img, '').width)
+        let speed = (toWidth - nowWidth) / 10
+        speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed)
+        img.style.width = nowWidth + speed + 'px'
+        if (nowWidth === toWidth) {
+          clearInterval(img.timer)
+        }
+      }, 15)
+    }
+
+    let ul = document.querySelector('ul')
+    ul.addEventListener('mousemove', handleMove, false)
+    ul.addEventListener('mouseout', handleOut, false)
+    let imgList = document.querySelectorAll('img')
+    imgList = [].slice.call(imgList)
+    const width = parseInt(window.getComputedStyle(imgList[0], '').width)
+
+    function handleMove (e) {
+      let img = e.target
+      if (imgList.indexOf(img) === -1) {
+        return
+      }
+      let index = imgList.indexOf(img),
+          imgOffLeft = img.offsetLeft,
+          imgMid = imgOffLeft + width / 2,
+          x = e.clientX,
+          i = index,
+          j = i + 1
+
+      const mutiple = 2,
+            scope = 100
+
+      while (i >= 0) {
+        let percent = (scope - Math.abs(imgMid - width / 2 * (index - i) - x)) / scope * mutiple
+        if (percent < 1) break
+        toBig(imgList[i], width * percent)
+        console.log(imgList[i], percent)
+        i--          
+      }
+      while (j < imgList.length) {
+        let percent = (scope - Math.abs(imgMid + width * (j - index) - x)) / scope * mutiple
+        if (percent < 1) break
+        toBig(imgList[j], width * percent)
+        console.log(imgList[j], percent)   
+        j++
+      }
+      console.log('-------------------')
+    }
+    function handleOut () {
+      imgList.forEach(function (img) {
+        toBig(img, width)
+      })
+    }
+  </script>
+</body>
+</html>

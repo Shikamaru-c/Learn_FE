@@ -1,0 +1,31 @@
+body {
+	background-color: black;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+.wrapper {
+	width: 224px;
+	margin: 10px auto;
+}
+ul {
+	font-size: 0;
+	background-color: white;
+	padding: 8px;
+	overflow: auto;
+	border-radius: 5px;
+}
+ul li {
+	float: left;
+	margin: 1px;
+}
+ul li img {
+	border-radius: 3px;
+}
+ul li:hover {
+	cursor: pointer;
+}
+ul li.big {
+	cursor: auto;
+}

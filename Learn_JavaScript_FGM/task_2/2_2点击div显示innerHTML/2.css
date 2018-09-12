@@ -1,0 +1,14 @@
+ * {
+ 	padding: 0;
+ 	margin: 0;
+ }
+div {
+ 	width: 600px;
+ 	margin: 20px auto;
+ 	border: 1px solid black;
+ 	padding: 10px;
+ 	cursor: pointer;
+ }
+div:last-of-type strong{  /*要注意这里的选择器*/
+	color: red;
+ }

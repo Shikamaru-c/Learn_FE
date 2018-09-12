@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>task2</title>
+  <link rel="stylesheet" href="reset.css">
+  <style>
+    body {
+      background: black;
+    }
+    div.bannerWrapper {
+      position: relative;
+      width: 470px;
+      height: 170px;
+      margin: 20px auto;
+      border: 10px solid #fff;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    ul.wrapper {
+      position: absolute;
+      font-size: 0;
+    }
+    ul.navbar {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      font-size: 0;
+    }
+    ul.navbar li {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      margin: 3px;
+      border-radius: 50%;
+      background: blue;
+    }
+    ul.navbar li.current {
+      background: orange;
+    }
+  </style>
+</head>
+<body>
+<div class="bannerWrapper">
+  <ul class="wrapper">
+    <li><img src="images/01.jpg"></li>
+    <li><img src="images/02.jpg"></li>
+    <li><img src="images/03.jpg"></li>
+    <li><img src="images/04.jpg"></li>
+    <li><img src="images/05.jpg"></li>
+  </ul>
+</div>
+  <script>
+    var AutoPlay = function (id) {
+      this.initialize(id)
+    }
+    AutoPlay.prototype = {
+      initialize: function (id) {
+        this.bannerWrapper = document.querySelector('.bannerWrapper')
+        this.wrapper = document.querySelector('.wrapper')
+        this.imgWrapper = document.querySelectorAll('img')
+        this.autoTimer = null
+        this.now = 0
+        this.creatBtn()
+        this.btn = document.querySelectorAll('.navbar li')
+        this.toggle()
+        this.autoTimer = setInterval(() => {
+          this.next()
+        }, 3000)
+        this.bannerWrapper.onmouseover = () => {
+          clearInterval(this.autoTimer)
+        }
+        this.bannerWrapper.onmouseout = () => {
+          this.autoTimer = setInterval(() => {
+            this.next()
+          }, 3000)
+        }
+        for (var i = 0; i < this.btn.length; i++) {
+          this.btn[i].index = i
+          this.btn[i].onmouseover = () => {
+            this.now = this.index
+            this.toggle()
+          }
+        }
+      },
+      creatBtn: function () {
+        this.count = document.createElement('ul')
+        this.frag = document.createDocumentFragment()
+        this.count.className = 'navbar'
+        for (var i = 0; i < this.imgWrapper.length; i++) {
+          var li = document.createElement('li')
+          li.innerHTML = i + 1
+          this.frag.appendChild(li)
+        }
+        this.count.appendChild(this.frag)
+        this.bannerWrapper.appendChild(this.count)
+      },
+      toggle: function () {
+        for (var i = 0; i < this.btn.length; i++) {
+          this.btn[i].className = ''
+        }
+        this.btn[this.now].className = 'current'
+        this.doMove(-(this.now * this.imgWrapper[0].offsetHeight))
+      },
+      next: function () {
+        this.now ++
+        this.now == this.btn.length && (this.now = 0)
+        this.toggle()
+      },
+      doMove: function (target) {
+        var timer
+        clearInterval(timer)
+        timer = setInterval(() => {
+          var speed = (target - this.wrapper.offsetTop) / 5
+          speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed)
+          this.wrapper.offsetTop == target ? 
+            clearInterval(timer) : (this.wrapper.style.top = this.wrapper.offsetTop + speed + 'px')
+        }, 30)
+      }
+    }
+    window.onload = function () {
+      new AutoPlay('bannerWrapper')
+    }
+    // (function () {
+    //   var imgList = document.querySelectorAll('img'),
+    //     imgWrapper = document.querySelector('.wrapper'),
+    //     wrapper = document.querySelector('.bannerWrapper'),
+    //     navList = document.querySelectorAll('.navbar li'),
+    //     height = imgList[0].offsetHeight,
+    //     index = 0,
+    //     direction = false,
+    //     play,
+    //     showAnimation
+    //   wrapper.onmouseover = function () {
+    //     clearInterval(play)
+    //   }
+    //   wrapper.onmouseout = function () {
+    //     autoPlay()
+    //   }
+    //   for (var i = 0; i < navList.length; i++) {
+    //     navList[i].pos = i
+    //     navList[i].onmouseover = function () {
+    //       index = this.pos
+    //       show()
+    //     }
+    //   }
+    //   function autoPlay () {
+    //     play = setInterval(function () {
+    //       if (index == imgList.length - 1) {
+    //         direction = !direction
+    //       } else if (index == 0) {
+    //         direction = !direction
+    //       }
+    //       if (direction) {
+    //         index ++
+    //       } else {
+    //         index --
+    //       }
+    //       show()
+    //     }, 2000)
+    //   }
+    //   autoPlay()
+    //   function show () {
+    //     clearInterval(showAnimation)
+    //     for (var i = 0; i < navList.length; i++) {
+    //       navList[i].className = ''
+    //     } 
+    //     navList[index].className = 'current'
+    //     var length = -index * height
+    //     showAnimation = setInterval(function () {
+    //       var top = imgWrapper.offsetTop
+    //       var pace = (length - top) / 10
+    //       pace = pace > 0 ? Math.ceil(pace) : Math.floor(pace)
+    //       imgWrapper.style.top = top + pace + 'px'
+    //       if (top == length) {
+    //         clearInterval(showAnimation)
+    //       }
+    //     }, 30)
+    //   }
+    // })()
+  </script>
+</body>
+</html>

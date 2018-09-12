@@ -1,0 +1,314 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* --------------- reset --------------- */
+
+.wrapper {
+  background-color: #666;
+}
+* {
+  font-family: "微软雅黑";
+}
+
+/* --------------- header --------------- */
+.header {
+  height: 85px;
+  background: #69c;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.nav {
+  width: 1080px;
+  margin: 0 auto;
+
+}
+.nav .logo{
+  float: left;
+}
+.navbar {
+  float: right;
+}
+.navbar li {
+  float: left;
+}
+.nav a {
+  line-height: 85px;
+  padding: 20px 10px;
+  text-decoration: none;
+}
+.navbar a {
+  color: #ccc;
+  letter-spacing: 1px;
+}
+.navbar a:hover {
+  color:#666;
+}
+.logo a {
+  text-decoration: none;
+  font-size: 40px;
+  color: #FFF;
+}
+
+/* --------------- content --------------- */
+
+.information {
+  width: 1080px;
+  margin: 0 auto;
+  background-color: #ccc;
+  margin-top: 85px;
+}
+.contentPic {
+  padding: 80px 60px 60px 60px;
+}
+.contentPic img {
+  float: right;
+  border-radius: 50%;
+  width: 250px;
+}
+.contentText {
+  float: left;
+  width: 730px;
+  color: #FFF;
+}
+.clearAfter:after {
+  display: block;
+  content: "";
+  clear: both;
+  visibility: hidden;
+}
+.contentText p {
+  font-size: 20px;
+  text-align: right;
+  line-height: 30px;
+  padding: 100px 0px 0px 85px;
+}
+.contentText h2 {
+  text-align: right;
+  font-size: 24px;
+  padding: 0 0 80px 0;
+}
+.information hr {
+  width: 500px;
+  text-align: right;
+  background-color: white;
+  height: 5px;
+  border: none;
+  margin: 50px 0 50px auto;
+}
+
+/* --------------- portfolio --------------- */
+
+.portfolio {
+  width: 1080px;
+  margin: 0 auto;
+  background-color: white;
+}
+.contentHeader {
+  text-align: center;
+  padding: 60px;
+}
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #666;
+}
+.portfolio hr,.form hr {
+  height: 5px;
+  background: #666;
+  border: none;
+  width: 500px;
+  margin: 50px auto -30px auto;
+}
+.portfolioPic {
+  width: 900px;
+  margin: 0 auto;
+}
+.portfolioPic li {
+  height: 250px;
+  width: 400px;
+  border: 1px solid #CCC;
+  margin: 30px 0;
+  line-height: 250px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: #666;
+}
+.portfolioPic li:nth-child(odd) {
+  float: right;
+}
+.portfolioPic li:nth-child(even) {
+  float: left;
+}
+
+/* --------------- form --------------- */
+
+.form {
+  width: 1080px;
+  margin: 0 auto;
+  background-color: white;
+}
+label,input,textarea,button {
+  display: block;
+}
+.form .formlist {
+  float: left;
+  padding: 10px 0;
+}
+.form .formText {
+  float: right;
+  width: 400px;
+  font-size: 20px;
+  padding: 40px 0;
+  line-height: 26px;
+  color: #666;
+}
+input{
+  width: 400px;
+  height: 50px;
+  border: none;
+  border-bottom: 1px solid #666;
+  outline: none;
+}
+textarea {
+  width: 400px;
+  height: 250px;
+  border: none;
+  border-bottom: 1px solid #666;
+  outline: none;
+  font-size: 30px;
+  padding: 2px;
+  resize: none;
+  color: #666;
+}
+label {
+  font-size: 16px;
+  padding: 15px 0;
+  color: #999;
+}
+.formform {
+  width: 900px;
+  margin: 0 auto;
+}
+input[value] {
+  font-size: 30px;
+  line-height: 50px;
+  color: #666;
+}
+button {
+  margin: 50px 0;
+  font-size: 20px;
+  padding: 5px;
+  color: #666;
+}
+.textMiddle {
+  padding-top: 60px;
+}
+.textBottom {
+  margin: 335px -20px 0 0;
+}
+/* --------------- footer --------------- */
+
+.footer {
+  background: #ccc;
+}
+.about {
+  width: 1350px;
+  margin: 0 auto;
+  height: 240px;
+  color: #FFF;
+}
+.copyright {
+  text-align: center;
+  height: 85px;
+  line-height: 85px;
+  background-color: #69c;
+  font-size: 22px;
+  color: #fff;
+}
+.aboutLeft {
+  float: left;
+  width: 300px;
+  text-align: center;
+  padding: 65px 0 0 0;
+}
+.aboutRight {
+  float: right;
+  width: 300px;
+  text-align: center;
+  padding: 65px 0 0 0;
+}
+.aboutRight {
+  float: right;
+}
+.about h2 {
+  font-size: 25px;
+  font-weight: bold;
+  padding-bottom: 30px;
+}
+.aboutLeft p {
+  font-size: 20px;
+  line-height: 30px;
+}
+.aboutRight li {
+  display: inline-block;
+  border: 1px solid #666;
+  width: 40px;
+  height: 40px;
+}
+.aboutLeft a {
+  text-decoration: none;
+  color: #69c;
+}
+.aboutLeft a:hover{
+  text-decoration: underline;
+}
+
+

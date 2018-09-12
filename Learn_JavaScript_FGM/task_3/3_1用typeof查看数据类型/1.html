@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>1</title>
+	<style>
+		pre {
+			border: dashed 1px black;
+			background-color: #ccc;
+			color: green;
+			padding: 10px;
+		}
+		span {
+			color: #777;
+		}
+	</style>
+</head>
+<body>
+<pre>
+	&lt;script type="text/javascript"&gt;
+		alert(typeof 12345); <span>//输出number</span>
+		alert(typeof "abc"); <span>//输出string</span>
+		alert(typeof document); <span>//输出object</span>
+	&lt;/script&gt;
+</pre>
+<script>
+	var l1 = "typeof 12345 →" + typeof 12345 + "\n\n";
+	var l2 = "typeof \"abc\" →" + typeof "abc" + "\n\n";
+	var l3 = "typeof document →" + typeof document + "\n\n";
+	alert(l1 + l2 + l3);
+</script>
+</body>
+</html>

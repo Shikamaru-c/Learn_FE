@@ -1,0 +1,560 @@
+* {
+	font-family: "微软雅黑" !important;
+}
+/*--------------------header--------------------*/
+header {
+	height: 50px;
+	background-color: white;
+	width: 100%;
+	min-width: 1280px;
+}
+.logo {
+	margin-left: 50px;
+}
+div.logo img {
+	float: left;
+	margin-top: 9.5px; /*让图片垂直居中*/
+	margin-right: 10px;
+}
+div.logo h2 {
+	float: left;
+	line-height: 50px;
+	font-size: 20px;
+}
+header ul {
+	float: right;
+	margin-right: 50px;
+}
+header li {
+	float: left;
+}
+header li a {
+	display: block;
+	height: 47px; /*少了3px为了在hover链接时的3px的border*/
+	padding: 0 12px;
+	line-height: 45px;
+	text-decoration: none;
+	font-size: 15px;
+	color: #787b83;
+}
+header li a img {
+	display: block;
+	float: left;
+	margin: 14px 5px 0 0;
+}
+header li.register a{
+	color: #e74f4d;
+}
+header li a:hover,header li a:active {
+	color: #e74f4d;
+	border-bottom: 3px #e74f4d solid;
+}
+/*--------------------section1--------------------*/
+.section1 {
+	height: 854px;
+	width: 100%;
+	min-width: 1280px;
+	background: url(image/task7_3.png);
+	background-size: cover;
+	position: relative;
+}
+.section1 .section1content {
+	position: absolute;
+	top: 270px;
+	left: 140px;
+}
+.section1 h1{
+	color: white;
+	font-size: 50px;
+	line-height: 76px;
+}
+.section1 h2 {
+	width: 280px;
+	font-size: 20px;
+	line-height: 30px;
+	color: white;
+}
+.section1 button {
+	border: none;
+	outline: none;
+	background-color: #e74f4d;
+	height: 50px;
+	width: 300px;
+	font-size: 28px;
+	color: white;
+	margin-top: 40px;
+}
+.section1 button:hover,.section1 button:active {
+	color: #e74f4d;
+	background-color: white;
+	font-size: 25px;
+}
+/*--------------------section2---------------*/
+.section2 {
+	height: 260px;
+	width: 100%;
+	min-width: 1280px;
+}
+.section2 li {
+	display: block;
+	float: left;
+	width: 25%;
+	text-align: center;
+}
+.section2 li img {
+	margin: 50px 0;
+	width: 40px;
+	height: 40px;
+}
+.section2 li p {
+	border-left: 1px solid #787b83;
+	color: #787b83;
+	height: 40px;
+	font-size: 16px;
+	line-height: 20px;
+}
+.section2 li p span {
+	display: block;
+	width: 180px;
+	margin: 0 auto;
+}
+.section2 li:first-child {
+	margin-left: -1px;
+}
+/*--------------------section3--------------------*/
+.section3 {
+	height: 340px;
+	width: 100%;
+	min-width: 1280px;
+	background-color: #ededed;
+	text-align: center;
+}
+.section3 img {
+	margin: 70px 0 40px 0;
+}
+.section3 h1 {
+	font-size: 50px;
+	color: #787b83;
+}
+/*--------------------seciton4--------------------*/
+.section4 {
+	height: 341px;
+	width: 100%;
+	min-width: 1280px;
+	background: url(image/task7_9.png);
+	background-size: cover;
+	text-align: center;
+}
+.section4 h2{
+	font-size: 20px;
+	color: white;
+	padding-top: 50px;
+}
+.section4 hr {
+	width: 30px;
+	border: none;
+	height: 2px;
+	background-color: white;	
+}
+.section4 p {
+	font-size: 16px;
+	color: white;
+	margin: 20px 0 60px 0;
+}
+.section4 select {
+	width: 240px;
+	height: 34px;
+	border: none;
+	outline-color: #e74f4d;
+	color: #787b83;
+	margin: 0 10px;
+	padding: 0 10px;
+	background: url(image/task7_23.png) white no-repeat right center;
+}
+.section4 select option {
+	background-color: #e3e2e4;
+	color: white;
+}
+.section4 button {
+	width: 240px;
+	height: 34px;
+	border: none;
+	outline: none;
+	background-color: #e74f4d;
+	color: white;
+	font-size: 16px;
+	margin: 0 10px;
+}
+.section4 button:hover,.section4 button:active {
+	color: #e74f4d;
+	background: white;
+	font-size: 15px;
+}
+/*--------------------section5--------------------*/
+.section5 {
+	height: 600px;
+	width: 100%;
+	min-width: 1280px;
+	background-color: #f7f7f7;
+}
+.section5 ul {
+	width: 1180px;
+	margin: 0 auto;
+}
+.section5 li {
+	float: left;
+	text-align: center;
+}
+.section5 li img {
+	padding: 10px 7px;
+	margin: 90px 39px 0 39px;
+	background-color: white;
+}
+.section5 li h2 {
+	font-size: 20px;
+	margin: 16px;
+}
+.section5 li p {
+	font-size: 14px;
+	color: #787b83;
+}
+.section5 .textTop img {
+	margin-top: 0;
+}
+.section5 .textTop h2 {
+	font-size: 25px;
+	letter-spacing: 35px;
+	text-indent: 35px;
+	margin: 90px 0 0 0;
+}
+.section5 .textTop p {
+	line-height: 40px;
+}
+/*--------------------section6--------------------*/
+.section6 {
+	height: 567px;
+	width: 100%;
+	min-width: 1280px;
+}
+.section6Left {
+	height: 567px;
+	width: 66.5%;
+	background: url(image/task7_15.png) no-repeat right center,url(image/task7_14.png);
+	background-size: auto,cover;
+	float: left;
+	text-align: center;
+	color: white;
+}
+.section6Left h2 {
+	font-size: 45px;
+	margin-top: 160px;
+}
+.section6Left h1 {
+	font-size: 140px;
+}
+.section6Left h3 {
+	margin-top: 20px;
+	font-size: 20px;
+}
+.section6Left time {
+	line-height: 50px;
+	font-size: 20px;
+}
+.section6Right {
+	text-align: center;
+	width: 33.5%;
+	float: left;
+}
+.section6Right h3 {
+	font-size: 20px;
+	margin-top: 180px;
+	margin-bottom: 24px;
+	letter-spacing: 1px;
+}
+.section6Right h3 span.number {
+	color: #e74f4d;
+}
+.section6Right p {
+	padding: 0 80px;
+	line-height: 34px;
+	text-align: left;
+	color: #787b83;
+}
+.section6Right button {
+	outline: none;
+	width: 100px;
+	height: 30px;
+	color: #e74f4d;
+	border: 1px solid #e74f4d;
+	background-color: white;
+	border-radius: 2px;
+	margin-top: 50px;
+}
+.section6Right ul {
+	margin: 20px auto 0 auto;
+	width: 111px;
+}
+.section6Right ul li {
+	float: left;
+	width: 15px;
+	height: 15px;
+	margin: 10px;
+	border: 1px solid #787b83;
+	border-radius: 50%;
+}
+.section6Right ul li:hover,.section6Right ul li:active {
+	background-color: #787b83;
+}
+/*--------------------section7--------------------*/
+.section7 {
+	height: 521px;
+	width: 100%;
+	min-width: 1280px;
+}
+.section7 article {
+	float: left;
+	height: 521px;
+	width: 33.25%;
+	text-align: center;
+}
+.section7 .article1 {
+	background-color: #e74f4d;
+}
+.section7 .article3 {
+	width: 33.5%;
+	background: url(image/task7_16.png);
+	background-size: cover;
+}
+.section7 .article1 {
+	color: white;
+}
+.section7 .article2 {
+	color: black;
+}
+.section7 h1 {
+	margin-top: 160px;
+	line-height: 30px;
+}
+.section7 p {
+	margin-bottom: 20px;
+}
+.section7 hr {
+	border: none;
+	height: 1px;
+	width: 20px;
+}
+.section7 .article1 hr {
+	background-color: white;
+}
+.section7 .article2 hr {
+	background-color: black;
+}
+.section7 button {
+	width: 150px;
+	height: 30px;
+	outline: none;
+	border-radius: 2px;
+	letter-spacing: 1px;
+	text-indent: 1px;
+	margin-top: 14px;
+}
+.section7 .article1 button {
+	background-color: #e74f4d;
+	color: white;
+	border: white 1px solid;
+}
+.section7 .article2 button {
+	background-color: white;
+	color: #e74f4d;
+	border: #e74f4d 1px solid;
+}
+/*--------------------section8--------------------*/
+.section8 {
+	height: 700px;
+	width: 100%;
+	min-width: 1280px;
+}
+.section8 .formHeader {
+	text-align: center;
+	padding: 100px;
+}
+.section8 .formHeader h1 {
+	font-size: 20px;
+}
+.section8 .formHeader hr {
+	background-color: #e74f4d;
+	border: none;
+	height: 2px;
+	width: 26px;
+}
+.section8 .formHeader p {
+	font-size: 14px;
+	color: #787b83;
+	line-height: 18px;
+}
+.section8 .wrapper {
+	width: 1160px;
+	margin: 0 auto;
+}
+.section8 .wrapper .formContent {
+	float: left;
+	width: 360px;
+}
+.section8 .wrapper form {
+	float: right;
+	width: 720px;
+}
+.section8 .wrapper .formContent h2 {
+	font-size: 16px;
+	margin-bottom: 26px;
+}
+.section8 .wrapper .formContent3 h2 {
+	margin-bottom: 10px;
+}
+.section8 .wrapper .formContent p {
+	font-size: 14px;
+	color: #787b83;
+	line-height: 18px;
+	letter-spacing: 0.5px;
+	margin-bottom: 10px;
+}
+.section8 .wrapper .footer {
+	color: #787b83;
+	font-size: 14px;
+	text-align: right;
+}
+.section8 .wrapper .footer img {
+	padding-right: 7px;
+	vertical-align: middle;
+}
+.section8 .wrapper .formContent1 {
+	margin-bottom: 30px;
+}
+.section8 .wrapper .formContent2 {
+	margin-bottom: 15px;
+}
+
+.section8 input {
+	width: 340px;
+	height: 40px;
+	border: none;
+	outline: none;
+	background-color: #edecee;
+	padding-left: 10px;
+}
+.section8 #name {
+	float: left;
+}
+.section8 #age {
+	float: right;
+}
+.section8 #tel {
+	float: left;
+	margin-top: 20px;
+}
+.section8 #address {
+	float: right;
+	margin-top: 20px;
+}
+.section8 textarea {
+	height: 100px;
+	width: 710px;
+	border: none;
+	outline: none;
+	resize: none;
+	background-color: #edecee;
+	margin-top: 20px;
+	padding-left: 10px;
+	padding-top: 5px;
+	color: #787b83;
+}
+.section8 form button {
+	width: 710px;
+	height: 40px;
+	border: none;
+	outline: none;
+	box-sizing: content-box;
+	margin-top: 20px;
+	background-color: #edecee;
+	font-size: 18px;
+}
+/*--------------------div.contact---------------*/
+.contact {
+	height: 400px;
+	width: 100%;
+	min-width: 1280px;
+	background-color: #32353e;
+	text-align: center;
+	color: white;
+}
+.contact h1 {
+	font-size: 26px;
+	padding-top:80px;
+}
+.contact p {
+	font-size: 14px;
+	line-height: 18px;
+	width: 530px;
+	margin: 14px auto 26px auto;
+}
+.contact .emailButton {
+	width: 580px;
+	height: 30px;
+	margin: 0 auto;
+}
+.contact input {
+	width: 500px;
+	height: 36px;
+	border: none;
+	outline: none;
+	float: left;
+	box-sizing: border-box;
+	padding-left: 10px;
+}
+.contact button {
+	width: 80px;
+	height: 36px;
+	border: none;
+	outline: none;
+	background-color: #6f7178;
+	color: white;
+	float: left;
+	letter-spacing: 10px;
+	text-indent: 10px;
+}
+.contact ul {
+	width: 220px;
+	margin: 30px auto;
+	text-align: center;
+}
+.contact ul li {
+	float: left;
+	margin: 15px;
+}
+.contact ul li a img {
+	width: 25px;
+	height: 25px;
+}
+/*--------------------footer--------------------*/
+footer {
+	height: 50px;
+	width: 100%;
+	min-width: 1280px;
+	background-color: #303039; 
+	text-align: center;
+	line-height: 50px;
+	color: white;
+	font-size: 12px;
+}
+footer .footerLeft {
+	float: left;
+	margin-left: 50px;
+}
+footer .footerRight {
+	float: right;
+	margin-right: 50px;
+}
+footer .footerRight a {
+	color: white;
+	text-decoration: none;
+}

@@ -1,0 +1,28 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+div {
+	width: 80px;
+	margin: 0 auto;
+	position: relative;
+	overflow: visible;
+}
+li {
+	list-style: none;
+	background-color: #ccc;
+	padding: 5px 40px 5px 5px;
+	cursor: pointer;
+}
+ul {
+	border: 1px solid black;
+	position: absolute;
+	top: 24px;
+	left: 0;
+}
+li:last-child {
+	border-top: 1px solid black;
+}
+li:hover,li:active {
+	background-color: #777;
+}

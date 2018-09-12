@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        body {
+            background: #aaa;
+        }
+        .wrapper {
+            width: 606px;
+            margin: 20px auto;
+        }
+        .image-wrapper {
+            position: relative;
+            width: 606px;
+            height: 150px;
+            overflow: hidden;
+        }
+        .image-wrapper ul {
+            position: absolute;
+            white-space: nowrap;
+            font-size: 0;
+        }
+        .image-wrapper li {
+            display: inline-block;
+            width: 124px;
+            margin-left: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            white-space: pre-wrap;
+            text-align: center;
+            font-size: 14px;
+            color: #fff;
+            background: black;
+        }
+        .image-wrapper li:first-child {
+            margin-left: 0;
+        }
+        .image-wrapper li img {
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .scroll-bar-wrapper {
+            position: relative;
+            width: 606px;
+        }
+        .left-bar, .right-bar {
+            position: absolute;
+            width: 30px;
+            height: 20px;
+            box-sizing: border-box;
+            line-height: 20px;
+            background: #ccc;
+        }
+        .left-bar {
+            top: 0;
+            left: 0;
+            padding-left: 5px;
+            text-align: left;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        .right-bar {
+            top: 0;
+            right: 0;
+            padding-right: 5px;
+            text-align: right;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        .middle-bar {
+            position: absolute;
+            z-index: 10;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 20px;
+            box-sizing: border-box;            
+            margin: 0 20px;
+            padding: 1px;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            border-radius: 10px;
+            background: black;
+        }
+        .scroll-bar {
+            position: absolute;
+            width: 150px;
+            height: 16px;
+            background: #ccc;
+            border-radius: 9px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="image-wrapper">
+            <ul>
+                <li><img src="images/1.jpg">iPhone 4</li>
+                <li><img src="images/2.jpg">iPad 2</li> 
+                <li><img src="images/3.jpg">iPod touch</li>
+                <li><img src="images/4.jpg">iPod classic</li>
+                <li><img src="images/5.jpg">iPod shuffle</li>
+                <li><img src="images/6.jpg">iPod nano</li>
+                <li><img src="images/7.jpg">MacBook Air</li>
+                <li><img src="images/8.jpg">MacBook Pro</li>
+                <li><img src="images/9.jpg">Mac mini</li>
+                <li><img src="images/10.jpg">Mac Pro</li>
+            </ul>
+        </div>
+        <div class="scroll-bar-wrapper">
+            <span class="left-bar">&lt;</span>
+            <span class="middle-bar">
+                <div class="scroll-bar">
+                </div>
+            </span>
+            <span class="right-bar">&gt;</span>
+        </div>
+    </div>
+<script>
+    (function () {
+        let scrollBar = document.querySelector('.scroll-bar'),
+            leftBar = document.querySelector('.left-bar'),
+            rightBar = document.querySelector('.right-bar'),
+            midBar = document.querySelector('.middle-bar'),
+            wrapper = document.querySelector('.wrapper');
+        scrollBar.addEventListener('mousedown', downHandle, false)
+        window.addEventListener('mouseup', upHandle, false)
+        leftBar.addEventListener('mouseover', overHandle, false)
+        rightBar.addEventListener('mouseover', overHandle, false)
+        leftBar.addEventListener('mouseout', outHandle, false)
+        rightBar.addEventListener('mouseout', outHandle, false)
+        window.addEventListener('keydown', keepHandle, false)
+        wrapper.addEventListener('mousewheel', keepHandle, false)
+        midBar.addEventListener('click', clickHandle, false)
+
+        let mouseNowX,
+            offsetPercent,
+            wrapperTimer,
+            mover,
+            scrollTimer;
+        
+        function downHandle (e) {
+            window.addEventListener('mousemove', moveHandle, false)
+            mouseNowX = e.clientX
+        }
+        function moveHandle(e) {
+            (function () {
+                let moveX = e.clientX - mouseNowX
+                let barLeft = document.defaultView.getComputedStyle(scrollBar, '').left
+                barLeft = parseInt(barLeft)
+                let nowLeft = barLeft + moveX
+                mouseNowX = e.clientX
+
+                let barOffLeft = scrollBar.offsetLeft
+                let midBarWidth = document.querySelector('.middle-bar').offsetWidth
+                let scrollBarWidth = scrollBar.offsetWidth
+                let actualWidth = midBarWidth - scrollBarWidth
+
+                if (barOffLeft > 0 && barOffLeft < actualWidth) {
+                    if (nowLeft > 0 && nowLeft < actualWidth) {
+                        scrollBar.style.left = nowLeft + 'px'
+                        offsetPercent = nowLeft / actualWidth
+                    }
+                }
+            })()
+        }
+        function upHandle (e) {
+            window.removeEventListener('mousemove', moveHandle, false);                            
+            (function () {
+                let imgWrapper = document.querySelector('.image-wrapper')
+                let ul = imgWrapper.querySelector('ul')
+                let imgWrapperWidth = imgWrapper.offsetWidth
+                let ulWidth = ul.offsetWidth
+                let actualWidth = imgWrapperWidth - ulWidth
+
+                let toLeft = parseInt(actualWidth * offsetPercent)
+                
+                wrapperTimer = setInterval(function () {
+                    let ulLeft = parseInt(document.defaultView.getComputedStyle(ul, '').left)
+                    let speed = (toLeft - ulLeft) / 10
+                    speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed)
+                    ul.style.left = ulLeft + speed + 'px'
+                    if (toLeft === ulLeft) {
+                        clearInterval(wrapperTimer)
+                    }
+                }, 20)
+            })()  
+        }
+        function overHandle (e) {
+            let direction = e.target.className.split('-')[0]
+            if (direction === 'left') {
+                moveX = -3
+            } else if (direction === 'right') {
+                moveX = 3
+            }
+            mover = setInterval(function () {
+                let barLeft = document.defaultView.getComputedStyle(scrollBar, '').left
+                barLeft = parseInt(barLeft)
+                let nowLeft = barLeft + moveX
+
+                let barOffLeft = scrollBar.offsetLeft
+                let midBarWidth = document.querySelector('.middle-bar').offsetWidth
+                let scrollBarWidth = scrollBar.offsetWidth
+                let actualWidth = midBarWidth - scrollBarWidth
+
+                if (barOffLeft > 0 && barOffLeft < actualWidth) {
+                    if (nowLeft > 0 && nowLeft < actualWidth) {
+                        scrollBar.style.left = nowLeft + 'px'
+                        offsetPercent = nowLeft / actualWidth
+                    }
+                }
+                (function () {
+                let imgWrapper = document.querySelector('.image-wrapper')
+                let ul = imgWrapper.querySelector('ul')
+                let imgWrapperWidth = imgWrapper.offsetWidth
+                let ulWidth = ul.offsetWidth
+                let actualWidth = imgWrapperWidth - ulWidth
+
+                let toLeft = parseInt(actualWidth * offsetPercent)
+                ul.style.left = toLeft + 'px'
+                })()
+
+            }, 20)
+        }
+        function outHandle () {
+            clearInterval(mover)
+        }
+        function clickHandle (e) {
+            (function () {
+                let midBar = document.querySelector('.middle-bar')
+                let midBarWidth = midBar.offsetWidth
+                let scrollBarWidth = scrollBar.offsetWidth
+                let actualWidth = midBarWidth - scrollBarWidth
+                let midBarLeft = midBar.getBoundingClientRect().left
+                midBarLeft = parseInt(midBarLeft)
+
+                let imgWrapper = document.querySelector('.image-wrapper')
+                let ul = imgWrapper.querySelector('ul')
+                let imgWrapperWidth = imgWrapper.offsetWidth
+                let ulWidth = ul.offsetWidth
+                let actualWidth2 = imgWrapperWidth - ulWidth
+
+                var goX = e.clientX - midBarLeft - scrollBarWidth / 2
+                if (goX < 0) {
+                    goX = 0
+                } else if (goX > actualWidth) {
+                    goX = actualWidth
+                }
+                scrollTimer = setInterval(function () {
+                    let barLeft = document.defaultView.getComputedStyle(scrollBar, '').left
+                    barLeft = parseInt(barLeft)
+                    let speed = (goX - barLeft) / 10
+                    speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed)
+                    scrollBar.style.left = barLeft + speed + 'px'
+                    offsetPercent = parseInt(scrollBar.style.left) / actualWidth
+
+                    let toLeft = parseInt(actualWidth2 * offsetPercent)
+                    ul.style.left = toLeft + 'px'
+
+                    if (barLeft === goX) {
+                        clearInterval(scrollTimer)
+                    }
+                }, 20)
+            })();
+        }
+        function keepHandle (e) {
+            let moveX
+            if (e.keyCode === 37 || e.deltaY < 0) {
+                moveX = -10
+            } else if (e.keyCode === 39 || e.deltaY > 0) {
+                moveX = 10
+            }
+
+            let barLeft = document.defaultView.getComputedStyle(scrollBar, '').left
+            barLeft = parseInt(barLeft)
+            let nowLeft = barLeft + moveX
+
+            let barOffLeft = scrollBar.offsetLeft
+            let midBarWidth = document.querySelector('.middle-bar').offsetWidth
+            let scrollBarWidth = scrollBar.offsetWidth
+            let actualWidth = midBarWidth - scrollBarWidth
+
+            if (barOffLeft > 0 && barOffLeft < actualWidth) {
+                if (nowLeft > 0 && nowLeft < actualWidth) {
+                    scrollBar.style.left = nowLeft + 'px'
+                    offsetPercent = nowLeft / actualWidth
+                }
+            }
+            (function () {
+                let imgWrapper = document.querySelector('.image-wrapper')
+                let ul = imgWrapper.querySelector('ul')
+                let imgWrapperWidth = imgWrapper.offsetWidth
+                let ulWidth = ul.offsetWidth
+                let actualWidth = imgWrapperWidth - ulWidth
+
+                let toLeft = parseInt(actualWidth * offsetPercent)
+                let ulLeft = parseInt(document.defaultView.getComputedStyle(ul, '').left)
+                ul.style.left = toLeft + 'px'
+            })()
+        }
+    })()
+</script>
+</body>
+</html>

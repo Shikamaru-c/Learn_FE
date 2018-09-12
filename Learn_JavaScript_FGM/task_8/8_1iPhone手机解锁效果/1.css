@@ -1,0 +1,16 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+div {
+	width: 426px;
+	height: 640px;
+	margin: 0 auto;
+	background: url(images/1.jpg);
+	position: relative;
+}
+img {
+	position: absolute;
+	top: 546px;
+	left: 37px;
+}

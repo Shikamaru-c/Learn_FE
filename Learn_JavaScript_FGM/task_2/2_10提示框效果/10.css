@@ -1,0 +1,46 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+.wrapper {
+	border: 1px solid black;
+	width: 650px;
+	padding: 10px;
+	margin: 20px auto;
+	text-align: center;
+}
+h1 {
+	font-size: 18px;
+	margin: 10px 0;
+}
+ul {
+	font-size: 0;
+}
+li {
+	display: inline-block;
+	list-style: none;
+	border: 1px solid black;
+	margin: 10px;
+	position: relative;
+	width: 108px;
+	height: 108px;
+	overflow: visible;
+	background-color: #eee;
+	cursor: crosshair;
+}
+li h2 {
+	font-size: 13px;
+	text-align: left;
+	color: #777;
+	font-family: "微软雅黑";
+	padding-left: 10px;
+}
+li h2:first-child {
+	padding-top: 10px;
+}
+li img {
+	position: absolute;
+	top: -10px;
+	left: -10px;
+	border: 2px solid #ccc;
+}

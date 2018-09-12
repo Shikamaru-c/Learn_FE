@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>7</title>
+  <style>
+    table {
+      margin: 0 auto;
+      border-collapse: collapse;
+    }
+    td {
+      width: 353px;
+      height: 225px;
+      padding: 0;      
+      text-align: center;
+      border: 10px solid red;
+      background: black;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <td><img></td>
+      <td><img></td>
+    </tr>
+    <tr>
+      <td><img></td>
+      <td><img></td>
+    </tr>
+    <tr>
+      <td><img></td>
+      <td><img></td>
+    </tr>
+    <tr>
+      <td><img></td>
+      <td><img></td>
+    </tr>
+    <tr>
+      <td><img></td>
+      <td><img></td>
+    </tr>
+    <tr>
+      <td><img></td>
+      <td><img></td>
+    </tr>
+    <tr>
+      <td><img></td>
+      <td><img></td>
+    </tr>
+    <tr>
+      <td><img></td>
+      <td><img></td>
+    </tr>
+    <tr>
+      <td><img></td>
+      <td><img></td>
+    </tr>
+    <tr>
+      <td><img></td>
+      <td><img></td>
+    </tr>
+    <tr>
+      <td><img></td>
+      <td><img></td>
+    </tr>
+    <tr>
+      <td><img></td>
+      <td><img></td>
+    </tr>
+    <tr>
+      <td><img></td>
+      <td><img></td>
+    </tr>
+    <tr>
+      <td><img></td>
+      <td><img></td>
+    </tr>
+    <tr>
+      <td><img></td>
+      <td><img></td>
+    </tr>
+  </table>
+  <script>
+    let tdList = document.querySelectorAll('td')
+    tdList = [].slice.call(tdList)
+
+    tdList.forEach(function (td, index) {
+      let img = td.querySelector('img')
+      img.src = 'images/loading.gif'
+      let tdTop = td.getBoundingClientRect().top,
+          windowHeight = window.innerHeight
+      if (tdTop < windowHeight) {
+        let image = new Image()
+        image.onload = function () {
+          img.src = image.src
+        }
+        image.src = `http://www.fgm.cc/learn/lesson10/img/lazy/${index + 1}.jpg`        
+      }
+    })
+    window.onscroll = function () {
+      tdList.forEach(function (td, index) {
+        let img = td.querySelector('img'),
+            tdTop = td.getBoundingClientRect().top,
+            windowHeight = window.innerHeight
+        if (tdTop < windowHeight) {
+          let image = new Image()
+          image.onload = function () {
+            img.src = image.src
+          }
+          image.src = `http://www.fgm.cc/learn/lesson10/img/lazy/${index + 1}.jpg`
+        }
+      })
+    }
+  </script>
+</body>
+</html>

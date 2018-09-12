@@ -1,0 +1,183 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+}
+body {
+	background-color: gray;
+}
+header {
+	margin: 0;
+	padding: 0;
+	background-color: #333;
+	height: 80px;
+	color: white;
+}
+header h1 {
+	line-height: 80px;
+	float: left;
+	margin: 0 0 0 30px;
+}
+header li {
+	float: left;
+	width: 120px;
+}
+header ul {
+	float: right;
+	line-height: 80px;
+	width: 500px;
+}
+.article2 li {
+	list-style: none;
+	margin: 10px 20px;
+}
+article {
+	margin: 30px;
+	padding: 20px;
+	background-color: white;
+	box-shadow: 3px 3px 2px #777;
+}
+section {
+	margin: 30px;
+	padding: 20px;
+	background-color: white;
+	box-shadow: 3px 3px 2px #777;
+}
+section div {
+	display: inline-block;
+}
+h2.header2 {
+	font-size: 18px;
+	color: gray;
+	margin: 15px 0;
+}
+.writer,time {
+	font-size: 14px;
+	color: gray;
+}
+p {
+	text-indent: 2em;
+	margin: 15px 0;
+	line-height: 20px;
+}
+.pic {
+	border: 1px solid gray;
+	width: 200px;
+	height: 200px;
+	text-align: center;
+	padding: 10px;
+	margin: 20px 40px;
+}
+.pic h3 {
+	font-size: 16px;
+	margin: 15px 0;
+}
+.pic img {
+	width: 150px;
+}
+.article3 ol {
+	margin: 15px 30px;
+}
+.article3 ol li {
+	padding: 5px;
+}
+.article3 table {
+	width: 100%;
+}
+.article3 table thead {
+	background-color: #333;
+	color: white;
+	text-align: left;
+	font-weight: bold;
+}
+.article3 table tfoot {
+	background-color: gray;
+	font-weight: bold;
+}
+.article3 td,.article3 th {
+	padding: 4px;
+}
+td,th,table {
+	border-collapse: collapse;
+	border: 0.5px solid #ccc;
+}
+caption {
+	text-align: left;
+}
+aside {
+	margin: 30px;
+	padding: 20px;
+	background-color: white;
+	box-shadow: 3px 3px 2px #555;
+}
+aside h2 {
+	border-left: 3px gray solid;
+	padding: 10px 20px;
+}
+form {
+	margin: 30px 0;
+}
+.formLeft {
+	width: 35%;
+	float: left;
+	text-align: right;
+	margin-right: 15px;
+}
+form div {
+	margin: 15px 0;
+}
+textarea {
+	width: 45%;
+	height: 120px;
+	font-size: 14px;
+	padding: 3px;
+}
+button {
+	display: block;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 9px;
+	background-color: #69c;
+	font-size: 20px;
+	color: white;
+	margin: 0 auto;
+}
+input[type="email"],input[type="password"] {
+	padding: 3px;
+	height: 16px;
+}
+.hide {
+	visibility: hidden;
+}
+.hint {
+	font-size: 14px;
+	color: gray;
+}
+footer {
+	width: 100%;
+	height: 80px;
+	background-color: black;
+	text-align: center;
+	color: white;
+	font-size: 14px;
+}
+footer p {
+	line-height: 80px;
+	margin: 0;
+}
+
+/*---------------------------- layout ---------------------------*/
+main {
+	position: relative;
+}
+aside {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 500px;
+	margin-top: 0;
+}
+article,section {
+	margin-right: 600px;
+}
